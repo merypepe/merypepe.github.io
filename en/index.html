@@ -10,7 +10,7 @@
 
 <body>
     <nav class="menu-nav">
-        <ul>
+        <ul id="main-menu" class="nav-links">
             <li><a href="#rsvp">RSVP</a></li>
             <li><a href="#detalles">Event Details</a></li>
             <li><a href="#autobuses">Shuttle</a></li>
@@ -18,7 +18,14 @@
             <li><a href="#contacto">Contact</a></li>
             <li class="lang-switch"><a href="../index.html">ES</a> | <strong>EN</strong></li>
         </ul>
+        <button id="hamburger-btn" class="hamburger" aria-label="Open menu" aria-expanded="false"
+            aria-controls="main-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+    <div id="mobile-menu-overlay" class="menu-overlay"></div>
 
     <header id="inicio" class="hero">
         <h1>Mercedes & Pepe</h1>

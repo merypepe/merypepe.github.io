@@ -10,14 +10,22 @@
 
 <body>
   <nav class="menu-nav">
-    <ul>
+    <ul id="main-menu" class="nav-links">
       <li><a href="#rsvp">Confirmar Asistencia</a></li>
       <li><a href="#detalles">Detalles del Evento</a></li>
       <li><a href="#autobuses">Autobuses</a></li>
       <li><a href="#regalos">Regalo</a></li>
       <li><a href="#contacto">Contacto</a></li>
+      <li class="lang-switch"><strong>ES</strong> | <a href="en/index.html">EN</a></li>
     </ul>
+    <button id="hamburger-btn" class="hamburger" aria-label="Abrir menú" aria-expanded="false"
+      aria-controls="main-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </nav>
+  <div id="mobile-menu-overlay" class="menu-overlay"></div>
 
   <header id="inicio" class="hero">
     <h1>Mercedes y Pepe</h1>
@@ -74,8 +82,8 @@
 
   <section id="regalos" class="regalos">
     <h2>Regalo</h2>
-    <p>Nuestro mejor regalo es compartir este momento tan especial con vosotros! </p>
-    <p>Si aun así deseas ayudarnos en nuestra nueva estapa os dejamos nuestro número de cuenta más abajo.</p>
+    <p>Nuestro mejor regalo es compartir este momento tan especial con vosotros. </p>
+    <p>Pero si deseas ayudarnos en nuestra nueva estapa os dejamos nuestro número de cuenta más abajo.</p>
     <p><strong>MUCHAS GRACIAS!!</strong></p>
 
     <p class="dato">IBAN: ES41 0081 2717 3800 0226 9230</p>
@@ -107,6 +115,4 @@
   <script src="interactive.js"></script>
 </body>
 
-
 </html>
-
