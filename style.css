@@ -473,47 +473,79 @@ iframe:hover {
     font-size: 3rem;
   }
 
-  /* Force Mobile Menu behavior always for small screens */
-  .menu-nav .nav-links {
-    position: fixed;
+  /* Force hide hamburger initially on mobile, consistent with JS logic */
+  .hamburger {
+    display: none !important;
+  }
+
+  /* Ensure consistent sticky behavior and layout on mobile */
+  .menu-nav {
+    padding: 1rem 0;
+    position: sticky;
     top: 0;
-    right: 0;
-    height: 100vh;
-    width: 250px;
-    background-color: rgba(255, 255, 255, 0.98);
-    flex-direction: column;
+    z-index: 1100;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    pointer-events: auto;
+  }
+
+  /* When NOT scrolled: Force Horizontal Row */
+  .menu-nav .nav-links {
+    position: static !important;
+    top: auto;
+    right: auto;
+    height: auto;
+    width: auto;
+    background-color: transparent !important;
+    flex-direction: row !important;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    transform: translateX(100%);
-    transition: transform 0.4s ease;
-    z-index: 1050;
-    padding: 2rem;
+    gap: 1.2rem;
+    box-shadow: none !important;
+    transform: none !important;
+    transition: none;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+    display: flex !important;
   }
 
-  .menu-nav .nav-links.open {
-    transform: translateX(0);
-  }
-
-  .hamburger {
-    display: block !important;
-    /* Always show on mobile */
-  }
-
-  /* Reset menu-nav container on mobile to not be sticky bar */
-  .menu-nav {
-    padding: 0;
-    position: absolute;
-    /* Default to absolute for mobile header to start */
-    background: transparent;
+  /* When SCROLLED: Drawer Behavior */
+  .menu-nav.scrolled {
+    background-color: transparent;
     box-shadow: none;
     pointer-events: none;
   }
 
-  .menu-nav .hamburger {
+  .menu-nav.scrolled .nav-links {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px !important;
+    background-color: rgba(255, 255, 255, 0.98) !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1) !important;
+    transform: translateX(100%) !important;
+    /* Hidden */
+    transition: transform 0.4s ease;
+    padding: 2rem;
+    pointer-events: auto;
+    display: flex !important;
+  }
+
+  .menu-nav.scrolled .nav-links.open {
+    transform: translateX(0) !important;
+  }
+
+  .menu-nav.scrolled .hamburger {
+    display: block !important;
     pointer-events: auto;
   }
+
+
 
   section {
     margin: 3rem 1rem;

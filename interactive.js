@@ -62,6 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
   hamburgerBtn.addEventListener("click", toggleMenu);
   menuOverlay.addEventListener("click", closeMenu);
 
+  // Check initial state
+  updateNavOnScroll();
+
   // Close menu when clicking a link
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
