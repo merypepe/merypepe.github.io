@@ -71,7 +71,7 @@ a {
 /* Hero Section */
 .hero {
   position: relative;
-  background: url("std.jpeg") no-repeat center center;
+  background: url("save_the_date.jpeg") no-repeat center center;
   background-size: cover;
   height: 85vh;
   /* Taller, more impactful */
@@ -359,4 +359,5 @@ iframe:hover {
     flex-direction: column;
     gap: 2rem;
   }
+
 }
