@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mercedes & Pepe's Wedding</title>
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+    <nav class="menu-nav">
+        <ul>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><a href="#detalles">Event Details</a></li>
+            <li><a href="#autobuses">Shuttle</a></li>
+            <li><a href="#regalos">Registry</a></li>
+            <li><a href="#contacto">Contact</a></li>
+            <li class="lang-switch"><a href="../index.html">ES</a> | <strong>EN</strong></li>
+        </ul>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <h1>Mercedes & Pepe</h1>
+    </header>
+
+    <section id="rsvp" class="rsvp">
+        <h2>RSVP</h2>
+        <p>Please provide your details to confirm your attendance.</p>
+        <form id="form-rsvp">
+            <label for="nombre">Full Name (you may include your guest):</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ex. Mercedes and Pepe" required />
+
+            <label for="asistencia">Will you be attending?</label>
+            <select id="asistencia" name="asistencia" required>
+                <option value="">Select an option</option>
+                <option value="Sí">Yes, we will be there!</option>
+                <option value="No">Regrettably, we cannot attend</option>
+            </select>
+
+            <label for="mensaje">Message for the couple (optional):</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Leave us a message..."></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+        <p id="respuesta-form"></p>
+    </section>
+
+    <section id="detalles" class="detalles">
+        <h2>Event Details</h2>
+        <p><strong>Date:</strong> Saturday, May 30, 2026</p>
+        <p><strong>Time:</strong> 1:30 PM (13:30)</p>
+        <p><strong>Location:</strong> Palacio de la Margarita, Madrid</p>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3027.6519702709465!2d-3.984075499999999!3d40.63755659999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4177c2ade90e81%3A0x2348925ba89d79dd!2sPalacio%20de%20la%20Margarita!5e0!3m2!1sen!2sus!4v1738038029920!5m2!1sen!2sus"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section id="autobuses" class="autobuses">
+        <h2>Shuttle Bus</h2>
+        <div class="autobuses-grid">
+            <div class="autobus-item">
+                <h3>To Venue</h3>
+                <p class="route">Moncloa &rarr; Venue</p>
+                <p class="time">13:00</p>
+            </div>
+            <div class="autobus-item">
+                <h3>Return</h3>
+                <p class="route">Venue &rarr; Moncloa</p>
+                <p class="time">22:00</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="regalos" class="regalos">
+        <h2>Registry</h2>
+        <p>Our greatest gift is sharing this special moment with you.</p>
+        <p>However, if you wish to help us start our new chapter, our account details are below.</p>
+        <p><strong>THANK YOU SO MUCH!!</strong></p>
+
+        <p class="dato">IBAN: ES41 0081 2717 3800 0226 9230</p>
+        <p class="dato">Zelle: (786) 867-6143</p>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <h2>Contact</h2>
+        <div class="contacto-grid">
+            <div class="contact-person">
+                <h3>Mercedes</h3>
+                <p><span class="label">Tel:</span> <a href="tel:+17868676138">+1 786 867 6138</a></p>
+                <p><span class="label">Email:</span> <a href="mailto:mercedeslg@hotmail.es">mercedeslg@hotmail.es</a>
+                </p>
+            </div>
+            <div class="contact-person">
+                <h3>Pepe</h3>
+                <p><span class="label">Tel:</span> <a href="tel:+17868676143">+1 786 867 6143</a></p>
+                <p><span class="label">Tel (ES):</span> <a href="tel:+34610828907">+34 610 828 907</a></p>
+                <p><span class="label">Email:</span> <a href="mailto:jr.codina96@gmail.com">jr.codina96@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Mercedes & Pepe's Wedding</p>
+    </footer>
+
+    <script src="../interactive.js"></script>
+</body>
+
+</html>
